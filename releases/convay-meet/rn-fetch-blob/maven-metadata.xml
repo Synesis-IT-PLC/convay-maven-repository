@@ -3,11 +3,12 @@
   <groupId>convay-meet</groupId>
   <artifactId>rn-fetch-blob</artifactId>
   <versioning>
-    <latest>0.12.0-convay-22320494</latest>
-    <release>0.12.0-convay-22320494</release>
+    <latest>0.12.0-convay-22321712</latest>
+    <release>0.12.0-convay-22321712</release>
     <versions>
       <version>0.12.0-convay-22320494</version>
+      <version>0.12.0-convay-22321712</version>
     </versions>
-    <lastUpdated>20260127082225</lastUpdated>
+    <lastUpdated>20260127114530</lastUpdated>
   </versioning>
 </metadata>
