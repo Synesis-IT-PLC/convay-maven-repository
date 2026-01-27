@@ -39,7 +39,7 @@ In app module `build.gradle`:
 
 ```gradle
 dependencies {
-    implementation "org.convay.react:convay-meet-sdk:1.0.0"
+    implementation "org.convay.react:convay-meet-sdk:1.0.1"
 }
 ```
 
