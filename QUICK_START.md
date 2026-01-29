@@ -106,6 +106,10 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("invite.enabled", true)     // optional
         .setFeatureFlag("recording.enabled", false) // optional
         .setFeatureFlag("pip.enabled", true)        // optional
+        .setFeatureFlag("participants.enabled", false) // optional
+        .setFeatureFlag("android.screensharing.enabled", false) // optional
+        .setFeatureFlag("video-mute.enabled", false) // optional
+        .setFeatureFlag("audio-mute.enabled", false) // optional
         .build();
 
 ConvayMeetActivity.launch(this, options);
@@ -128,6 +132,10 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("invite.enabled", true)     // optional
         .setFeatureFlag("recording.enabled", false) // optional
         .setFeatureFlag("pip.enabled", true)        // optional
+        .setFeatureFlag("participants.enabled", false) // optional
+        .setFeatureFlag("android.screensharing.enabled", false) // optional
+        .setFeatureFlag("video-mute.enabled", false) // optional
+        .setFeatureFlag("audio-mute.enabled", false) // optional
         .build();
 
 ConvayMeetActivity.launch(this, options);
@@ -149,6 +157,10 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("invite.enabled", true)     // optional
         .setFeatureFlag("recording.enabled", false) // optional
         .setFeatureFlag("pip.enabled", true)        // optional
+        .setFeatureFlag("participants.enabled", false) // optional
+        .setFeatureFlag("android.screensharing.enabled", false) // optional
+        .setFeatureFlag("video-mute.enabled", false) // optional
+        .setFeatureFlag("audio-mute.enabled", false) // optional
         .build();
 
 convayMeetView.join(options);
@@ -168,6 +180,67 @@ ConvayMeetConferenceOptions defaultOptions =
 ConvayMeet.setDefaultConferenceOptions(defaultOptions);
 ```
 
+## Show custom UI when SDK ends or user leaves
+
+When a meeting ends **or the user leaves**, listen for `READY_TO_CLOSE` (leave/close) or `CONFERENCE_TERMINATED` (host ended) and show your UI.
+
+**A) ConvayMeetActivity (recommended)**
+
+Create your own activity and override the callbacks:
+
+```java
+public class MyMeetActivity extends ConvayMeetActivity {
+    @Override
+    protected void onReadyToClose() {
+        // Meeting ended or user left
+        startActivity(new Intent(this, MyMeetingEndedActivity.class));
+        finish();
+    }
+
+    @Override
+    protected void onConferenceTerminated(HashMap<String, Object> extraData) {
+        // Host ended the meeting
+        startActivity(new Intent(this, MyMeetingEndedActivity.class));
+        finish();
+    }
+}
+```
+
+Then launch `MyMeetActivity` instead of `ConvayMeetActivity`.
+
+**B) ConvayMeetView (embedded)**
+
+Register a `BroadcastReceiver`:
+
+```java
+private final BroadcastReceiver meetReceiver = new BroadcastReceiver() {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        BroadcastEvent event = new BroadcastEvent(intent);
+        if (event.getType() == BroadcastEvent.Type.READY_TO_CLOSE
+                || event.getType() == BroadcastEvent.Type.CONFERENCE_TERMINATED) {
+            startActivity(new Intent(context, MyMeetingEndedActivity.class));
+        }
+    }
+};
+
+@Override
+protected void onStart() {
+    super.onStart();
+    IntentFilter filter = new IntentFilter();
+    filter.addAction(BroadcastEvent.Type.READY_TO_CLOSE.getAction());
+    filter.addAction(BroadcastEvent.Type.CONFERENCE_TERMINATED.getAction());
+    LocalBroadcastManager.getInstance(this).registerReceiver(meetReceiver, filter);
+}
+
+@Override
+protected void onStop() {
+    LocalBroadcastManager.getInstance(this).unregisterReceiver(meetReceiver);
+    super.onStop();
+}
+```
+
+
 ## Variable Details
 
 - `authToken`: Enterprise authentication token used for start meeting flow.
@@ -184,6 +257,10 @@ ConvayMeet.setDefaultConferenceOptions(defaultOptions);
 - `invite.enabled`: Enable invite UI
 - `recording.enabled`: Enable or disable recording controls
 - `pip.enabled`: Enable picture-in-picture on Android
+- `participants.enabled`: Enable or disable participants panel
+- `android.screensharing.enabled`: Enable or disable Android screen sharing
+- `video-mute.enabled`: Enable or disable the video mute button
+- `audio-mute.enabled`: Enable or disable the audio mute button
 
 ---
 
