@@ -110,6 +110,11 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("android.screensharing.enabled", false) // optional
         .setFeatureFlag("video-mute.enabled", false) // optional
         .setFeatureFlag("audio-mute.enabled", false) // optional
+        .setFeatureFlag("notifications.enabled", false) // optional
+        .setFeatureFlag("filmstrip.enabled", false) // optional
+        .setFeatureFlag("screenshare.landscape.enabled", true) // optional
+        // Hide self-view by default
+        .setConfigOverride("disableSelfView", true)
         .build();
 
 ConvayMeetActivity.launch(this, options);
@@ -136,6 +141,11 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("android.screensharing.enabled", false) // optional
         .setFeatureFlag("video-mute.enabled", false) // optional
         .setFeatureFlag("audio-mute.enabled", false) // optional
+        .setFeatureFlag("notifications.enabled", false) // optional
+        .setFeatureFlag("filmstrip.enabled", false) // optional
+        .setFeatureFlag("screenshare.landscape.enabled", true) // optional
+        // Hide self-view by default
+        .setConfigOverride("disableSelfView", true)
         .build();
 
 ConvayMeetActivity.launch(this, options);
@@ -161,6 +171,11 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("android.screensharing.enabled", false) // optional
         .setFeatureFlag("video-mute.enabled", false) // optional
         .setFeatureFlag("audio-mute.enabled", false) // optional
+        .setFeatureFlag("notifications.enabled", false) // optional
+        .setFeatureFlag("filmstrip.enabled", false) // optional
+        .setFeatureFlag("screenshare.landscape.enabled", true) // optional
+        // Hide self-view by default
+        .setConfigOverride("disableSelfView", true)
         .build();
 
 convayMeetView.join(options);
@@ -261,6 +276,9 @@ protected void onStop() {
 - `android.screensharing.enabled`: Enable or disable Android screen sharing
 - `video-mute.enabled`: Enable or disable the video mute button
 - `audio-mute.enabled`: Enable or disable the audio mute button
+- `notifications.enabled`: Enable or disable in-meeting notifications
+- `filmstrip.enabled`: Enable or disable the row of small participant video thumbnails shown alongside the main active speaker video
+- `screenshare.landscape.enabled`: Enable forced landscape mode during screen sharing
 
 ---
 
