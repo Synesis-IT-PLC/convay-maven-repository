@@ -17,6 +17,7 @@ dependencyResolutionManagement {
         maven {
             url = uri("https://raw.githubusercontent.com/Synesis-IT-PLC/convay-maven-repository/master/releases")
         }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 ```
@@ -29,6 +30,7 @@ allprojects {
         google()
         mavenCentral()
         maven { url = uri("https://raw.githubusercontent.com/Synesis-IT-PLC/convay-maven-repository/master/releases") }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 ```
