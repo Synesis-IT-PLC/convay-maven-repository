@@ -275,12 +275,9 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 - `startpage.enabled`: Required for start meeting flow (token-based).
 - `joinpage.enabled`: Required for join meeting flow (link-based).
-- `welcomepage.enabled`: Enable legacy welcome page (web-style start screen). Default: disabled.
 
 ### UI & layout
 
-- `meeting-name.enabled`: Show meeting name in headers.
-- `meeting-password.enabled`: Show meeting password button.
 - `title-bar.enabled`: Show upper title bar (meeting name, timer, camera). When `false`, only the bottom toolbox remains.
 - `filmstrip.enabled`: Show filmstrip with participant thumbnails.
 - `tile-view.enabled`: Allow tile/grid view layout.
@@ -342,24 +339,13 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 - `audio-focus.disabled`: Do **not** request audio focus (for apps managing audio themselves). Default: false.
 - `help.enabled`: Show Help button.
-- `server-url-change.enabled`: Allow changing the server URL from the UI.
 - `settings.enabled`: Show Settings entry in the UI.
 - `security-options.enabled`: Show Security Options button.
-- `unsaferoomwarning.enabled`: Show unsafe-room warning banner.
 
-### Auth & deep links
 
-- `authToken.enabled`: Use token-based authentication.
-- `joinDeeplink.enabled`: Enable join deep link handling.
-
-### Prejoin
-
-- `prejoinpage.enabled`: Show the prejoin screen before entering the meeting.
-- `prejoinpage.hideDisplayName`: Hide the display-name field on prejoin page. Default: false.
 
 ### Mobile-only
 
-- `calendar.enabled`: Enable calendar integration (Android: true, iOS: auto-detected).
 - `call-integration.enabled`: Enable CallKit / ConnectionService integration.
 - `car-mode.enabled`: Enable car mode UI on mobile.
 
