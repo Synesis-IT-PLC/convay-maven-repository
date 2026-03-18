@@ -278,13 +278,11 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 ### UI & layout
 
-- `title-bar.enabled`: Show upper title bar (meeting name, timer, camera). When `false`, only the bottom toolbox remains.
 - `filmstrip.enabled`: Show filmstrip with participant thumbnails.
 - `tile-view.enabled`: Allow tile/grid view layout.
 - `fullscreen.enabled`: Use immersive full-screen mode (hides system bars in conference).
 - `toolbox.enabled`: Show the bottom toolbox (main control bar).
 - `toolbox.alwaysVisible`: Keep toolbox always visible (no auto-hide). Default: false.
-- `conference-timer.enabled`: Show the in-call conference timer.
 
 ### Media controls
 
@@ -305,13 +303,11 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 - `recording.enabled`: Enable recording controls.
 - `ios.recording.enabled`: Enable iOS-specific recording UI. Default: disabled.
-- `live-streaming.enabled`: Enable live streaming controls (auto-detected).
-- `speakerstats.enabled`: Enable speaker statistics.
+
 
 ### Participants & reactions
 
 - `participants.enabled`: Enable participants list / pane.
-- `lobby-mode.enabled`: Enable lobby mode button.
 - `raise-hand.enabled`: Enable Raise Hand feature.
 - `reactions.enabled`: Enable emoji reactions.
 - `kick-out.enabled`: Allow moderators to remove participants.
