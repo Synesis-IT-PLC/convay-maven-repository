@@ -275,6 +275,7 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 - `startpage.enabled`: Required for start meeting flow (token-based).
 - `joinpage.enabled`: Required for join meeting flow (link-based).
+- `unique-participant-join.enabled`: Allow duplicate JWT session handling (replacement / older session leaves). Requires the corresponding JWT claim when enabled. Default: disabled (false).
 
 ### UI & layout
 
@@ -283,13 +284,15 @@ Unless noted otherwise, the default is **enabled (true)**.
 - `fullscreen.enabled`: Use immersive full-screen mode (hides system bars in conference).
 - `toolbox.enabled`: Show the bottom toolbox (main control bar).
 - `toolbox.alwaysVisible`: Keep toolbox always visible (no auto-hide). Default: false.
+- `active-speaker-name.enabled`: Show active-speaker name label on large video / speaker view.
+
 
 ### Media controls
 
 - `audio-mute.enabled`: Show audio mute/unmute button.
 - `video-mute.enabled`: Show video mute/unmute button.
 - `audio-only.enabled`: Show Audio Only toggle in overflow menu.
-- `resolution`: Override video resolution (e.g. 180, 360, 720).
+- `resolution`: Override local / max remote resolution (e.g. `180`, `360`, `720`) as configured by the SDK.
 - `video-share.enabled`: Show the video share button.
 - `overflow-menu.enabled`: Show the overflow (“more”) menu button.
 
@@ -297,13 +300,13 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 - `android.screensharing.enabled`: Enable Android screen sharing.
 - `ios.screensharing.enabled`: Enable iOS screen sharing. Default: disabled.
-- `screenshare.landscape.enabled`: Force landscape orientation while anyone is screen sharing.
+- `screenshare.landscape.enabled`: Lock to landscape while any participant is screen sharing. Default: disabled (false).
 
 ### Recording & streaming
 
-- `recording.enabled`: Enable recording controls.
+- `recording.enabled`: Enable recording controls. Default: auto-detected.
 - `ios.recording.enabled`: Enable iOS-specific recording UI. Default: disabled.
-
+- `live-streaming.enabled`: Enable live streaming. Default: auto-detected.
 
 ### Participants & reactions
 
@@ -316,7 +319,7 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 ### Communication & collaboration
 
-- `chat.enabled`: Enable in-meeting chat.
+- `chat.enabled`: Enable in-meeting chat and related UI (including unread indicators when enabled).
 - `invite.enabled`: Enable invite UI.
 - `invite-dial-in.enabled`: Enable dial-in invite UI.
 - `add-people.enabled`: Enable Add People entry point.
@@ -324,26 +327,36 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 ### Notifications
 
-- `notifications.enabled`: Show in-meeting notifications (host-only by default).
+- `notifications.enabled`: Show in-meeting notifications (host / moderator only when enabled). Default: enabled.
 
 ### Picture-in-Picture & navigation
 
-- `pip.enabled`: Enable Picture-in-Picture (where supported).
-- `pip-while-screen-sharing.enabled`: Show PiP button while screen sharing.
+- `pip.enabled`: Enable Picture-in-Picture (where supported). Default: auto-detected.
+- `pip-while-screen-sharing.enabled`: Show PiP button while screen sharing. Default: disabled (false).
+
+### Meeting security & lobby
+
+- `meeting-password.enabled`: Show meeting password button (password dialog may still appear if the room has a password).
+- `lobby-mode.enabled`: Enable lobby mode controls.
+- `security-options.enabled`: Show Security Options button.
+- `unsaferoomwarning.enabled`: Enable unsafe-room warning. Default: disabled (false).
 
 ### Misc & settings
 
 - `audio-focus.disabled`: Do **not** request audio focus (for apps managing audio themselves). Default: false.
 - `help.enabled`: Show Help button.
 - `settings.enabled`: Show Settings entry in the UI.
-- `security-options.enabled`: Show Security Options button.
-
-
+- `calendar.enabled`: Calendar integration. Default: enabled on Android.
+- `server-url-change.enabled`: Allow changing server URL in UI.
 
 ### Mobile-only
 
 - `call-integration.enabled`: Enable CallKit / ConnectionService integration.
 - `car-mode.enabled`: Enable car mode UI on mobile.
+
+### Advanced join behavior
+
+- `unique-participant-join.enabled`: Allow duplicate JWT session handling (replacement / older session leaves). Requires the corresponding JWT claim when enabled. Default: disabled (false).
 
 ### Example usage (Android)
 
@@ -357,6 +370,8 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("toolbox.enabled", true)
         .setFeatureFlag("overflow-menu.enabled", false)
         .setFeatureFlag("fullscreen.enabled", true)
+        .setFeatureFlag("active-speaker-name.enabled", false)
+        .setFeatureFlag("unique-participant-join.enabled", false)
         .build();
 ```
 
