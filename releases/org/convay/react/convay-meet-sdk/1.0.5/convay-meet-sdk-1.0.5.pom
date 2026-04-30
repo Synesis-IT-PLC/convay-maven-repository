@@ -88,7 +88,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-amplitude</artifactId>
-      <version>2.17.3-convay-23125201</version>
+      <version>2.17.3-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -99,7 +99,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-giphy</artifactId>
-      <version>2.3.0-convay-23125201</version>
+      <version>2.3.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -110,7 +110,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-async-storage</artifactId>
-      <version>1.24.0-convay-23125201</version>
+      <version>1.24.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -121,7 +121,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-linear-gradient</artifactId>
-      <version>2.8.3-convay-23125201</version>
+      <version>2.8.3-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -132,7 +132,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-background-timer</artifactId>
-      <version>2.4.1-convay-23125201</version>
+      <version>2.4.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -143,7 +143,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-community_clipboard</artifactId>
-      <version>1.14.1-convay-23125201</version>
+      <version>1.14.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -154,7 +154,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-community_netinfo</artifactId>
-      <version>11.4.1-convay-23125201</version>
+      <version>11.4.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -165,7 +165,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-default-preference</artifactId>
-      <version>1.4.4-convay-23125201</version>
+      <version>1.4.4-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -176,7 +176,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-device-info</artifactId>
-      <version>10.14.0-convay-23125201</version>
+      <version>10.14.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -187,7 +187,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-gesture-handler</artifactId>
-      <version>2.14.0-convay-23125201</version>
+      <version>2.14.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -198,7 +198,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-get-random-values</artifactId>
-      <version>1.9.0-convay-23125201</version>
+      <version>1.9.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -209,7 +209,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-immersive-mode</artifactId>
-      <version>2.0.2-convay-23125201</version>
+      <version>2.0.2-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -220,7 +220,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-keep-awake</artifactId>
-      <version>4.0.0-convay-23125201</version>
+      <version>4.0.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -231,7 +231,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-orientation-locker</artifactId>
-      <version>1.6.0-convay-23125201</version>
+      <version>1.6.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -242,7 +242,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-pager-view</artifactId>
-      <version>6.9.1-convay-23125201</version>
+      <version>6.9.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -253,7 +253,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-performance</artifactId>
-      <version>5.0.0-convay-23125201</version>
+      <version>5.0.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -264,7 +264,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-safe-area-context</artifactId>
-      <version>4.9.0-convay-23125201</version>
+      <version>4.9.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -275,7 +275,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-screens</artifactId>
-      <version>3.37.0-convay-23125201</version>
+      <version>3.37.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -286,7 +286,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-slider</artifactId>
-      <version>4.4.3-convay-23125201</version>
+      <version>4.4.3-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -297,7 +297,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-sound</artifactId>
-      <version>0.11.2-convay-23125201</version>
+      <version>0.11.2-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -308,7 +308,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-splash-screen</artifactId>
-      <version>3.3.0-convay-23125201</version>
+      <version>3.3.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -319,7 +319,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-svg</artifactId>
-      <version>15.15.4-convay-23125201</version>
+      <version>15.15.4-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -330,7 +330,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-video</artifactId>
-      <version>6.19.1-convay-23125201</version>
+      <version>6.19.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -341,7 +341,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-webrtc</artifactId>
-      <version>124.0.7-convay-23125201</version>
+      <version>124.0.7-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -352,7 +352,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-webview</artifactId>
-      <version>13.16.1-convay-23125201</version>
+      <version>13.16.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -363,7 +363,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-permissions</artifactId>
-      <version>5.5.1-convay-23125201</version>
+      <version>5.5.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -374,7 +374,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-vector-icons</artifactId>
-      <version>10.3.0-convay-23125201</version>
+      <version>10.3.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -385,7 +385,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-document-picker</artifactId>
-      <version>9.3.1-convay-23125201</version>
+      <version>9.3.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -396,12 +396,12 @@
     <dependency>
       <groupId>convay-meet</groupId>
       <artifactId>rn-fetch-blob</artifactId>
-      <version>0.12.0-convay-23125201</version>
+      <version>0.12.0-convay-23125393</version>
     </dependency>
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-fs</artifactId>
-      <version>2.20.0-convay-23125201</version>
+      <version>2.20.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -412,7 +412,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-image-picker</artifactId>
-      <version>7.2.3-convay-23125201</version>
+      <version>7.2.3-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -423,7 +423,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-exit-app</artifactId>
-      <version>2.0.0-convay-23125201</version>
+      <version>2.0.0-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -434,7 +434,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-masked-view</artifactId>
-      <version>0.3.2-convay-23125201</version>
+      <version>0.3.2-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
@@ -445,7 +445,7 @@
     <dependency>
       <groupId>com.facebook.react</groupId>
       <artifactId>react-native-blur</artifactId>
-      <version>4.4.1-convay-23125201</version>
+      <version>4.4.1-convay-23125393</version>
       <exclusions>
         <exclusion>
           <groupId>com.facebook.fresco</groupId>
