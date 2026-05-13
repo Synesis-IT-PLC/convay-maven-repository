@@ -153,36 +153,6 @@ ConvayMeetConferenceOptions options =
 ConvayMeetActivity.launch(this, options);
 ```
 
-## Alternatively, use ConvayMeetView
-
-```java
-ConvayMeetView convayMeetView = new ConvayMeetView(this);
-
-ConvayMeetConferenceOptions options =
-    new ConvayMeetConferenceOptions.Builder()
-        .setToken(authToken) // required for start meeting
-        .setFeatureFlag("startpage.enabled", true) // required
-        .setUserInfo(userInfo) // optional
-        .setAudioMuted(false) // optional
-        .setVideoMuted(false) // optional
-        .setFeatureFlag("chat.enabled", true)       // optional
-        .setFeatureFlag("invite.enabled", true)     // optional
-        .setFeatureFlag("recording.enabled", false) // optional
-        .setFeatureFlag("pip.enabled", true)        // optional
-        .setFeatureFlag("participants.enabled", false) // optional
-        .setFeatureFlag("android.screensharing.enabled", false) // optional
-        .setFeatureFlag("video-mute.enabled", false) // optional
-        .setFeatureFlag("audio-mute.enabled", false) // optional
-        .setFeatureFlag("notifications.enabled", false) // optional
-        .setFeatureFlag("filmstrip.enabled", false) // optional
-        .setFeatureFlag("screenshare.landscape.enabled", true) // optional
-        // Hide self-view by default
-        .setConfigOverride("disableSelfView", true)
-        .build();
-
-convayMeetView.join(options);
-setContentView(convayMeetView);
-```
 
 ## Optional defaults
 
@@ -225,37 +195,6 @@ public class MyMeetActivity extends ConvayMeetActivity {
 
 Then launch `MyMeetActivity` instead of `ConvayMeetActivity`.
 
-**B) ConvayMeetView (embedded)**
-
-Register a `BroadcastReceiver`:
-
-```java
-private final BroadcastReceiver meetReceiver = new BroadcastReceiver() {
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        BroadcastEvent event = new BroadcastEvent(intent);
-        if (event.getType() == BroadcastEvent.Type.READY_TO_CLOSE
-                || event.getType() == BroadcastEvent.Type.CONFERENCE_TERMINATED) {
-            startActivity(new Intent(context, MyMeetingEndedActivity.class));
-        }
-    }
-};
-
-@Override
-protected void onStart() {
-    super.onStart();
-    IntentFilter filter = new IntentFilter();
-    filter.addAction(BroadcastEvent.Type.READY_TO_CLOSE.getAction());
-    filter.addAction(BroadcastEvent.Type.CONFERENCE_TERMINATED.getAction());
-    LocalBroadcastManager.getInstance(this).registerReceiver(meetReceiver, filter);
-}
-
-@Override
-protected void onStop() {
-    LocalBroadcastManager.getInstance(this).unregisterReceiver(meetReceiver);
-    super.onStop();
-}
-```
 
 
 ## Variable Details
@@ -358,22 +297,6 @@ Unless noted otherwise, the default is **enabled (true)**.
 
 - `unique-participant-join.enabled`: Allow duplicate JWT session handling (replacement / older session leaves). Requires the corresponding JWT claim when enabled. Default: disabled (false).
 
-### Example usage (Android)
-
-```java
-ConvayMeetConferenceOptions options =
-    new ConvayMeetConferenceOptions.Builder()
-        .setAuthToken(authToken)
-        .setFeatureFlag("startpage.enabled", true)
-        .setFeatureFlag("joinpage.enabled", false)
-        .setFeatureFlag("title-bar.enabled", false)
-        .setFeatureFlag("toolbox.enabled", true)
-        .setFeatureFlag("overflow-menu.enabled", false)
-        .setFeatureFlag("fullscreen.enabled", true)
-        .setFeatureFlag("active-speaker-name.enabled", false)
-        .setFeatureFlag("unique-participant-join.enabled", false)
-        .build();
-```
 
 ---
 
