@@ -101,6 +101,7 @@ ConvayMeetConferenceOptions options =
     new ConvayMeetConferenceOptions.Builder()
         .setAuthToken(authToken) // required
         .setFeatureFlag("startpage.enabled", true) // required
+        .setFeatureFlag("pre-start-page.enabled", false) //optional
         .setUserInfo(userInfo) // optional
         .setAudioMuted(false) // optional
         .setVideoMuted(false) // optional
@@ -132,6 +133,8 @@ ConvayMeetConferenceOptions options =
     new ConvayMeetConferenceOptions.Builder()
         .setMeetingLink(meetingLink) // required
         .setFeatureFlag("joinpage.enabled", true) // required
+        .setFeatureFlag("prejoinpage.enabled", false) //optional
+        .setFeatureFlag("unique-participant-join.enabled", false) //optional
         .setUserInfo(userInfo) // optional
         .setAudioMuted(false) // optional
         .setVideoMuted(false) // optional
@@ -169,9 +172,11 @@ ConvayMeet.setDefaultConferenceOptions(defaultOptions);
 
 ## Show custom UI when SDK ends or user leaves
 
+If you want to show a custom UI after the meeting ends or the user leaves, follow the steps below.
+
 When a meeting ends **or the user leaves**, listen for `READY_TO_CLOSE` (leave/close) or `CONFERENCE_TERMINATED` (host ended) and show your UI.
 
-**A) ConvayMeetActivity (recommended)**
+**Step 1: Extend `ConvayMeetActivity` (recommended)**
 
 Create your own activity and override the callbacks:
 
@@ -192,6 +197,8 @@ public class MyMeetActivity extends ConvayMeetActivity {
     }
 }
 ```
+
+**Step 2: Launch your activity instead of `ConvayMeetActivity`**
 
 Then launch `MyMeetActivity` instead of `ConvayMeetActivity`.
 
@@ -215,6 +222,8 @@ Unless noted otherwise, the default is **enabled (true)**.
 - `startpage.enabled`: Required for start meeting flow (token-based).
 - `joinpage.enabled`: Required for join meeting flow (link-based).
 - `unique-participant-join.enabled`: Allow duplicate JWT session handling (replacement / older session leaves). Requires the corresponding JWT claim when enabled. Default: disabled (false).
+- `prejoinpage.enabled`: Show or hide the pre-join page before entering a meeting. When enabled, participants see a preview screen (camera/mic check) before joining. Default: enabled (true).
+- `prestartpage.enabled`: Show or hide the pre-start page before starting a meeting. When enabled, the host sees a preview screen before the meeting begins. Default: enabled (true).
 
 ### UI & layout
 
