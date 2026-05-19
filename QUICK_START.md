@@ -41,7 +41,7 @@ In app module `build.gradle`:
 
 ```gradle
 dependencies {
-    implementation "org.convay.react:convay-meet-sdk:1.0.7"
+    implementation "org.convay.react:convay-meet-sdk:1.0.8"
 }
 ```
 
@@ -134,7 +134,13 @@ ConvayMeetConferenceOptions options =
         .setMeetingLink(meetingLink) // required
         .setFeatureFlag("joinpage.enabled", true) // required
         .setFeatureFlag("prejoinpage.enabled", false) //optional
-        .setFeatureFlag("unique-participant-join.enabled", false) //optional
+        .setFeatureFlag("notifications.enabled", false) // optional
+        .setFeatureFlag("unique-participant-join.enabled", true) //optional
+        .setFeatureFlag("chat.enabled", true) //optional
+        .setFeatureFlag("participants.enabled", false) // optional
+        .setFeatureFlag("active-speaker-name.enabled", false) //optional
+        .setFeatureFlag("tile-view.enabled", false) //optional
+        .setFeatureFlag("filmstrip.enabled", false) // optional
         .setUserInfo(userInfo) // optional
         .setAudioMuted(false) // optional
         .setVideoMuted(false) // optional
@@ -142,12 +148,9 @@ ConvayMeetConferenceOptions options =
         .setFeatureFlag("invite.enabled", true)     // optional
         .setFeatureFlag("recording.enabled", false) // optional
         .setFeatureFlag("pip.enabled", true)        // optional
-        .setFeatureFlag("participants.enabled", false) // optional
         .setFeatureFlag("android.screensharing.enabled", false) // optional
         .setFeatureFlag("video-mute.enabled", false) // optional
         .setFeatureFlag("audio-mute.enabled", false) // optional
-        .setFeatureFlag("notifications.enabled", false) // optional
-        .setFeatureFlag("filmstrip.enabled", false) // optional
         .setFeatureFlag("screenshare.landscape.enabled", true) // optional
         // Hide self-view by default
         .setConfigOverride("disableSelfView", true)
